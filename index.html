@@ -4,60 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Biologia UFRGS - Índice</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; display: flex; }
-        
-        /* MENU LATERAL */
-        .sidebar { width: 280px; background: #f4f6f8; padding: 20px; height: 100vh; overflow-y: auto; border-right: 1px solid #e1e4e8; position: fixed; }
-        .sidebar h3 { color: #24292e; margin-top: 0; }
-        .sidebar ul { list-style: none; padding-left: 0; }
-        .sidebar ul li { margin-bottom: 10px; }
-        .sidebar ul li a { color: #0366d6; text-decoration: none; font-weight: 500; display: block; padding: 5px; border-radius: 4px; }
-        .sidebar ul li a:hover { background: #e1e4e8; text-decoration: none; }
-        .sidebar ul li a.active { background: #0366d6; color: white; }
+    <link rel="stylesheet" href="style.css">
 
-        /* CONTEÚDO PRINCIPAL */
-        .content { margin-left: 320px; padding: 40px; max-width: 900px; width: 100%; }
-        h1, h2 { color: #24292e; border-bottom: 1px solid #eaecef; padding-bottom: 5px; }
-        code { background: #f6f8fa; padding: 2px 5px; border-radius: 3px; font-family: monospace; }
-        
-        /* CONTÊINER DO FLUXOGRAMA (Rolagem Horizontal) */
-        .flowchart-container {
-            width: 100%;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            padding: 10px;
-            background: #f6f8fa;
-            margin-top: 20px;
-            box-sizing: border-box;
-        }
-        .flowchart-container img {
-            max-width: 100%; /* Garante que a imagem nunca passe da largura da tela */
-            height: auto;    /* Mantém a proporção vertical correta */
-            display: block;
-            margin: 0 auto;  /* Centraliza a imagem se ela for menor que o container */
-        }
-        /* RESPONSIVIDADE PARA CELULAR (Telas menores que 768px) */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column; /* Empilha a sidebar em cima e o conteúdo embaixo */
-            }
-            .sidebar {
-                position: relative; /* Tira a fixação para não cobrir a tela */
-                width: 100%;
-                height: auto;
-                border-right: none;
-                border-bottom: 2px solid #e1e4e8;
-                padding: 20px;
-                box-sizing: border-box; /* Impede que o padding quebre a largura de 100% */
-            }
-            .content {
-                margin-left: 0; /* Remove o recuo que compensava a sidebar no PC */
-                padding: 20px;
-                box-sizing: border-box;
-            }
-        }
-    </style>
 </head>
 <body>
 
