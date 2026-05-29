@@ -24,17 +24,18 @@
         /* CONTÊINER DO FLUXOGRAMA (Rolagem Horizontal) */
         .flowchart-container {
             width: 100%;
-            overflow-x: auto; /* Cria a barra de rolagem horizontal se a imagem for maior que a tela */
             border: 1px solid #e1e4e8;
             border-radius: 6px;
             padding: 10px;
             background: #f6f8fa;
             margin-top: 20px;
+            box-sizing: border-box;
         }
         .flowchart-container img {
-            max-width: none; /* Impede a imagem de encolher */
-            height: auto;
+            max-width: 100%; /* Garante que a imagem nunca passe da largura da tela */
+            height: auto;    /* Mantém a proporção vertical correta */
             display: block;
+            margin: 0 auto;  /* Centraliza a imagem se ela for menor que o container */
         }
     </style>
 </head>
