@@ -1,6 +1,8 @@
 /* =========================================
    BASE TEMA & LAYOUT
    ========================================= */
+   /* Botão Menu Celular (Invisível no PC) */
+.menu-toggle { display: none; }
 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; display: flex; background: #fdfdfd; }
 
 /* =========================================
@@ -62,10 +64,47 @@ h1 { margin-top: 0; }
 .flowchart-container img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
 
 /* =========================================
-   RESPONSIVIDADE (Telas menores que 768px)
+   RESPONSIVIDADE E MENU SLIDE (Celular)
    ========================================= */
 @media (max-width: 768px) {
     body { flex-direction: column; }
-    .sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 2px solid #e1e4e8; box-sizing: border-box; }
+    
+    /* Oculta a sidebar fora da tela à esquerda */
+    .sidebar { 
+        position: fixed; 
+        top: 0; 
+        left: -100%; /* Esconde a barra */
+        width: 280px; 
+        height: 100vh; 
+        z-index: 999; 
+        transition: left 0.3s ease-in-out; /* Animação suave */
+        border-right: 1px solid #e1e4e8;
+        border-bottom: none;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Classe que o JS vai adicionar para mostrar a barra */
+    .sidebar.open { left: 0; }
+    
     .content { margin-left: 0; padding: 20px; box-sizing: border-box; }
+
+    /* Estilo do Botão Flutuante */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: #0366d6;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 50px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .menu-toggle:hover { background: #024ea4; }
 }
