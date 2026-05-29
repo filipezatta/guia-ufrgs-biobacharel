@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Biologia UFRGS - Índice</title>
+    <title>Guia Biologia UFRGS - Cadeiras</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; display: flex; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; display: flex; background: #fdfdfd; }
         
         /* MENU LATERAL */
         .sidebar { width: 280px; background: #f4f6f8; padding: 20px; height: 100vh; overflow-y: auto; border-right: 1px solid #e1e4e8; position: fixed; }
@@ -17,25 +17,33 @@
         .sidebar ul li a.active { background: #0366d6; color: white; }
 
         /* CONTEÚDO PRINCIPAL */
-        .content { margin-left: 320px; padding: 40px; max-width: 900px; width: 100%; }
-        h1, h2 { color: #24292e; border-bottom: 1px solid #eaecef; padding-bottom: 5px; }
-        code { background: #f6f8fa; padding: 2px 5px; border-radius: 3px; font-family: monospace; }
+        .content { margin-left: 320px; padding: 40px; width: 100%; max-width: 1400px; }
+        h1, h2 { color: #24292e; border-bottom: 1px solid #eaecef; padding-bottom: 5px; margin-top: 40px; }
+        h1 { margin-top: 0; }
         
-        /* CONTÊINER DO FLUXOGRAMA (Rolagem Horizontal) */
-        .flowchart-container {
-            width: 100%;
-            overflow-x: auto; /* Cria a barra de rolagem horizontal se a imagem for maior que a tela */
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            padding: 10px;
-            background: #f6f8fa;
+        /* GRID RESPONSIVO (A Mágica dos 400px) */
+        .grid-container {
+            display: grid;
+            /* Isso cria colunas com no mínimo ~380px. Se a tela tiver 800px, cabem 2. Se tiver 1200px, cabem 3. */
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 25px;
             margin-top: 20px;
         }
-        .flowchart-container img {
-            max-width: none; /* Impede a imagem de encolher */
-            height: auto;
-            display: block;
+
+        /* ESTILO DO CARD DA CADEIRA */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            transition: transform 0.2s;
         }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.08); }
+        .card h3 { margin-top: 0; color: #0366d6; font-size: 1.1em; border-bottom: none; padding-bottom: 0; }
+        .card .info { font-size: 0.9em; color: #586069; margin-bottom: 15px; border-bottom: 1px dashed #e1e4e8; padding-bottom: 10px; }
+        .card .info strong { color: #24292e; }
+        .card p { font-size: 0.95em; color: #444; }
     </style>
 </head>
 <body>
@@ -43,24 +51,280 @@
     <div class="sidebar">
         <h3>Guia Biologia UFRGS</h3>
         <ul>
-            <li><a href="index.html" class="active">Índice e Fluxograma</a></li>
+            <li><a href="index.html">Índice e Fluxograma</a></li>
             <li><a href="planejamento.html">Planejamento Acadêmico</a></li>
             <li><a href="estagios.html">Estágios e Bolsas</a></li>
-            <li><a href="cadeiras.html">Guia de Cadeiras (Opinião)</a></li>
+            <li><a href="cadeiras.html" class="active">Guia de Cadeiras (Opinião)</a></li>
             <li><a href="contatos.html">Links e Contatos Úteis</a></li>
         </ul>
     </div>
 
     <div class="content">
-        <h1>Índice Geral</h1>
-        <p>Bem-vindo ao guia de sobrevivência para o Bacharelado em Ciências Biológicas da UFRGS. Navegue pelo menu lateral para encontrar dicas sobre como organizar sua graduação, estágios e resenhas sobre as disciplinas.</p>
+        <h1>Guia de Cadeiras: O que ninguém te conta</h1>
+        <p>Minhas opiniões sinceras, nível de dificuldade, dicas para as provas e o que focar em cada disciplina do bacharelado. Se a cadeira for pré-requisito de muita coisa, o aviso está aí.</p>
 
-        <h2>Fluxograma do Curso (2024/2)</h2>
-        <p>Abaixo está o mapeamento oficial de pré-requisitos do curso. Role para os lados para visualizar todas as etapas (da Etapa 1 [cite: 2] até a Etapa 7 [cite: 8]).</p>
-        
-        <div class="flowchart-container">
-            <img src="fluxograma.png" alt="Fluxograma de pré-requisitos Biologia UFRGS Bacharelado 2024/2">
+        <h2>Semestre 2023/2</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Ambiente e Sociedade</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> Milton de Souza Mendonça Junior</div>
+                <p><em>[Placeholder] Cadeira introdutória. Foque em entender os conceitos básicos discutidos em aula. Não é das mais difíceis, mas exige leitura.</em></p>
+            </div>
+            <div class="card">
+                <h3>Biologia Celular</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Renato Silvano, Charley Staats, Guido Lenz, etc.</div>
+                <p><em>[Placeholder] Base fundamental. As provas costumam ser detalhistas. Faça resumos dos processos celulares e não deixe acumular matéria.</em></p>
+            </div>
+            <div class="card">
+                <h3>Ecologia I</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Gonçalo Nuno, Heinrich Hasenack, Renan Maestri</div>
+                <p><em>[Placeholder] Exige bastante interpretação gráfica e entendimento de dinâmicas populacionais. Faça os exercícios recomendados.</em></p>
+            </div>
+            <div class="card">
+                <h3>Elaboração de Trabalhos Científicos</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> Hugo Verli, Marilene Vainstein, etc.</div>
+                <p><em>[Placeholder] Essencial para o TCC e Iniciação Científica. Preste muita atenção nas normas da ABNT e estruturação de projetos.</em></p>
+            </div>
+            <div class="card">
+                <h3>História da Vida na Terra</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Equipe Compartilhada</div>
+                <p><em>[Placeholder] Muita decoreba de eras geológicas e eventos de extinção. Crie uma linha do tempo visual, ajuda muito.</em></p>
+            </div>
+            <div class="card">
+                <h3>Princípios de Química Inorgânica</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Equipe Compartilhada</div>
+                <p><em>[Placeholder] Base para a Bioquímica. Foque em estequiometria, ligações químicas e reações ácido-base.</em></p>
+            </div>
         </div>
+
+        <h2>Semestre 2024/1</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Biologia de Fungos</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> Caroline Turchetto, Rosa Mara B. da Silveira</div>
+                <p><em>[Placeholder] Excelente introdução à micologia. Dica: as aulas práticas no laboratório são a chave para mandar bem nas avaliações.</em></p>
+            </div>
+            <div class="card">
+                <h3>Introdução à Botânica</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> Gerhard Ernst Overbeck, Marcelo Reginato</div>
+                <p><em>[Placeholder] O início da dor de cabeça com os ciclos reprodutivos. Entenda bem a alternância de gerações.</em></p>
+            </div>
+            <div class="card">
+                <h3>Zoologia de Campo</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Márcio Borges Martins, Paula Beatriz de Araujo</div>
+                <p><em>[Placeholder] Uma das cadeiras mais legais. O trabalho de campo é intenso, então vá com disposição e anote tudo na prancheta.</em></p>
+            </div>
+            <div class="card">
+                <h3>Anatomia Humana</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Equipe Compartilhada</div>
+                <p><em>[Placeholder] Atlas de anatomia será seu melhor amigo. As provas práticas no necrotério exigem reconhecimento rápido de estruturas.</em></p>
+            </div>
+            <div class="card">
+                <h3>Ecologia II</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Leandro Duarte, Luciane Crossetti</div>
+                <p><em>[Placeholder] Foca mais em ecossistemas e comunidades. A complexidade aumenta em relação à Ecologia I.</em></p>
+            </div>
+            <div class="card">
+                <h3>História Evolutiva Animal</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> Luiz Alexandre Campos, Luiz Roberto Malabarba</div>
+                <p><em>[Placeholder] Cladogramas para todo lado. Aprenda a ler e montar árvores filogenéticas sem errar os nós.</em></p>
+            </div>
+            <div class="card">
+                <h3>Organismos Eucariontes Basais</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> Luciana de Souza Cardoso, Leandra Franciscato</div>
+                <p><em>[Placeholder] O antigo "protistas". Muita diversidade morfológica para memorizar.</em></p>
+            </div>
+            <div class="card">
+                <h3>Química Orgânica Teórica Fundamental</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Andre Luiz Netto Ferreira</div>
+                <p><em>[Placeholder] Gargalo clássico. Entenda os mecanismos de reação (SN1, SN2, etc), não tente apenas decorar as moléculas.</em></p>
+            </div>
+        </div>
+
+        <h2>Semestre 2024/2</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Bioestatística</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Patricia Klarmann Ziegelmann</div>
+                <p><em>[Placeholder] Extremamente necessária para pesquisa. Entenda bem quando usar cada teste de hipótese (ANOVA, Teste T, Qui-quadrado).</em></p>
+            </div>
+            <div class="card">
+                <h3>Biofísica Molecular e Celular</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Evelise Bach, Rogerio Margis</div>
+                <p><em>[Placeholder] Potencial de ação, transporte de membrana e bioeletricidade. Matéria densa, requer bastante estudo pós-aula.</em></p>
+            </div>
+            <div class="card">
+                <h3>Bioquímica I-A</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Daniel Pens Gelain</div>
+                <p><em>[Placeholder] Estrutura de aminoácidos, proteínas e enzimas. Sem isso, você não passa em Bioquímica II.</em></p>
+            </div>
+            <div class="card">
+                <h3>Evolução e Diversidade de Plantas</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Caroline Turchetto, Marcelo Reginato</div>
+                <p><em>[Placeholder] Evolução profunda. É a base para entender como as plantas conquistaram o ambiente terrestre.</em></p>
+            </div>
+            <div class="card">
+                <h3>Física para Ciências Biológicas</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Antonio Marcos Helgueira de Andrade</div>
+                <p><em>[Placeholder] Óptica, termodinâmica e fluidos aplicados à biologia. Sobreviva fazendo listas de exercícios.</em></p>
+            </div>
+            <div class="card">
+                <h3>Morfologia Vegetal Comparada</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Mariane Silveira, Rinaldo Pires dos Santos</div>
+                <p><em>[Placeholder] Cortes histológicos de plantas. Lâminas e mais lâminas no microscópio. Desenhe o que você vê.</em></p>
+            </div>
+            <div class="card">
+                <h3>Processos Sedimentares Aplicados à Biologia</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Ana Karina Scomazzon</div>
+                <p><em>[Placeholder] Foco em geologia básica e formação de bacias para entender o registro fóssil.</em></p>
+            </div>
+            <div class="card">
+                <h3>Zoologia I</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Claudia Calegaro Marques, Leonardo Santos de Souza</div>
+                <p><em>[Placeholder] Invertebrados não-artrópodes. Cadeira de coreografia: decorar os planos corporais e filos menores.</em></p>
+            </div>
+        </div>
+
+        <h2>Semestre 2025/1</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Biologia Molecular Básica</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Henrique Bunselmeyer Ferreira, Tadeu Mello e Souza</div>
+                <p><em>[Placeholder] Replicação, transcrição e tradução. Cadeira pesada, mas as aulas costumam ser muito boas.</em></p>
+            </div>
+            <div class="card">
+                <h3>Bioquímica II-A</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Fátima Theresinha Costa, Marilene Vainstein</div>
+                <p><em>[Placeholder] Vias metabólicas (Glicólise, Ciclo de Krebs). Desenhe os mapas metabólicos na parede do quarto se precisar.</em></p>
+            </div>
+            <div class="card">
+                <h3>Embriologia Comparada</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Emerson Andre Casali, Tatiana Montanari</div>
+                <p><em>[Placeholder] Gastrulação e neurulação. Entender a topologia 3D do embrião em desenvolvimento é o maior desafio.</em></p>
+            </div>
+            <div class="card">
+                <h3>Zoologia II</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Claudia Calegaro Marques</div>
+                <p><em>[Placeholder] O império dos Artrópodes. O volume de informação sobre insetos e crustáceos é gigantesco.</em></p>
+            </div>
+        </div>
+
+        <h2>Semestre 2025/2</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Fisiologia Humana</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Alexandre Luz de Castro</div>
+                <p><em>[Placeholder] Sistemas cardiovascular, respiratório e renal. Cadeira fantástica, mas exige integração de todos os sistemas.</em></p>
+            </div>
+            <div class="card">
+                <h3>Genética I</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Poli Mara Spritzer, Maríndia Deprá</div>
+                <p><em>[Placeholder] Genética mendeliana e de populações. Faça muitos exercícios de heredogramas e probabilidade.</em></p>
+            </div>
+            <div class="card">
+                <h3>Microbiologia</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Fabricio Souza Campos, Sueli Teresinha</div>
+                <p><em>[Placeholder] Bactérias e vírus. As práticas de coloração de Gram e meios de cultura são essenciais para passar.</em></p>
+            </div>
+            <div class="card">
+                <h3>Paleontologia Aplicada à Biologia</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Joao Carlos Coimbra, Roberto Iannuzzi</div>
+                <p><em>[Placeholder] Excelente para amarrar os conceitos de evolução com o registro fóssil. Cadeira bem visual.</em></p>
+            </div>
+            <div class="card">
+                <h3>Sistemática de Plantas Avasculares</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> Luciana de Souza Cardoso, Marines Garcia</div>
+                <p><em>[Placeholder] Briófitas e afins. Foco na reprodução dependente da água e estruturas morfológicas.</em></p>
+            </div>
+            <div class="card">
+                <h3>Zoologia III</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Marcio Borges Martins, Laura Verrastro, etc.</div>
+                <p><em>[Placeholder] Cordados. Evolução dos peixes até mamíferos. Muitas sinapomorfias para lembrar para as provas práticas.</em></p>
+            </div>
+        </div>
+
+        <h2>Semestre 2026/1</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Histologia Comparada</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> [A Confirmar]</div>
+                <p><em>[Placeholder] Aprenda a identificar tecidos epiteliais, conjuntivos e musculares rapidamente no microscópio.</em></p>
+            </div>
+            <div class="card">
+                <h3>Sistemática de Plantas Vasculares</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> [A Confirmar]</div>
+                <p><em>[Placeholder] O terror das famílias botânicas. Comece a montar seu herbário mental desde o dia 1.</em></p>
+            </div>
+            <div class="card">
+                <h3>Biologia da Resposta Imune</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> [A Confirmar]</div>
+                <p><em>[Placeholder] Imunologia básica. Entenda a diferença entre imunidade inata e adaptativa e o papel de cada linfócito.</em></p>
+            </div>
+            <div class="card">
+                <h3>Fisiologia Comparativa I</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> [A Confirmar]</div>
+                <p><em>[Placeholder] Como diferentes grupos de animais resolvem os mesmos problemas fisiológicos de respiração e osmorregulação.</em></p>
+            </div>
+            <div class="card">
+                <h3>Genética II</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> [A Confirmar]</div>
+                <p><em>[Placeholder] Genética molecular avançada. Dificuldade eleva bastante em relação à Genética I.</em></p>
+            </div>
+            <div class="card">
+                <h3>Métodos Biofísicos de Análise</h3>
+                <div class="info"><strong>Créditos:</strong> 2 | <strong>Prof(s):</strong> [A Confirmar]</div>
+                <p><em>[Placeholder] Técnicas de laboratório (espectrofotometria, cromatografia). Bem focado na prática da pesquisa.</em></p>
+            </div>
+        </div>
+
+        <h2>Eletivas e Complementares</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Biodiversidade em Algas</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Marines Garcia</div>
+                <p><em>[Placeholder] Cadeira incrível se você tem interesse em ficologia. Carga horária prática forte.</em></p>
+            </div>
+            <div class="card">
+                <h3>Diversidade de Macrofungos</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Rosa Mara Borges da Silveira</div>
+                <p><em>[Placeholder] Aprofundamento excelente para quem gostou de Biologia de Fungos. Ótimo para coletas e taxonomia.</em></p>
+            </div>
+            <div class="card">
+                <h3>Ecologia Comportamental</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> Jose Claudio Moreira, Renato Silvano</div>
+                <p><em>[Placeholder] Discute por que os animais fazem o que fazem (forrageio, seleção sexual). Bem teórica e interessante.</em></p>
+            </div>
+            <div class="card">
+                <h3>Fotografia Aplicada a Biologia</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Renato Silvano</div>
+                <p><em>[Placeholder] Ajuda muito no registro de saídas de campo e documentação de amostras em laboratório.</em></p>
+            </div>
+            <div class="card">
+                <h3>Química Forense</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> [A Confirmar]</div>
+                <p><em>[Placeholder] Cadeira com pegada de CSI. Métodos analíticos aplicados na resolução de crimes e perícia ambiental.</em></p>
+            </div>
+        </div>
+
+        <h2>Disciplinas de Outros Cursos</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>História Econômica Geral</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Thomas Hyeono Kang (ECO)</div>
+                <p><em>[Placeholder] Boa para ampliar horizontes fora da biologia, mas a carga de leitura histórica é densa.</em></p>
+            </div>
+            <div class="card">
+                <h3>Elementos de Direito Ambiental</h3>
+                <div class="info"><strong>Créditos:</strong> 3 | <strong>Prof(s):</strong> [A Confirmar] (DIR)</div>
+                <p><em>[Placeholder] Vital se você pretende trabalhar com licenciamento, consultoria ambiental ou órgãos de fiscalização.</em></p>
+            </div>
+            <div class="card">
+                <h3>Cálculo Diferencial e Integral - EAD</h3>
+                <div class="info"><strong>Créditos:</strong> 4 | <strong>Prof(s):</strong> Rafael Rigao Souza (MAT)</div>
+                <p><em>[Placeholder] Cadeira temida. O formato EAD exige disciplina militar. Resolva o máximo de listas de limites e derivadas possível.</em></p>
+            </div>
+        </div>
+
     </div>
 
 </body>
