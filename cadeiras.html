@@ -46,6 +46,22 @@
         .card p { font-size: 0.95em; color: #444; }
         .eletiva {background-color:#E0FFFF; }
         .extracurricular {background-color:#9db200; }
+                /* CONTÊINER DO FLUXOGRAMA (Rolagem Horizontal) */
+        .flowchart-container {
+            width: 100%;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 10px;
+            background: #f6f8fa;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+        .flowchart-container img {
+            max-width: 100%; /* Garante que a imagem nunca passe da largura da tela */
+            height: auto;    /* Mantém a proporção vertical correta */
+            display: block;
+            margin: 0 auto;  /* Centraliza a imagem se ela for menor que o container */
+        }
     </style>
 </head>
 <body>
@@ -64,7 +80,9 @@
     <div class="content">
         <h1>Guia de Cadeiras</h1>
         <p>Minhas opiniões, nível de dificuldade, dicas para as provas e o que focar em cada disciplina do bacharelado.</p>
-
+        <div class="flowchart-container">
+            <img src="Fluxograma - Biologia bacharelado 24-2.jpg" alt="Fluxograma de pré-requisitos Biologia UFRGS Bacharelado 2024/2">
+        </div>
         <h2>1° Semestre (2023/2)</h2>
         <div class="grid-container">
             <div class="card">
