@@ -37,6 +37,26 @@
             display: block;
             margin: 0 auto;  /* Centraliza a imagem se ela for menor que o container */
         }
+        /* RESPONSIVIDADE PARA CELULAR (Telas menores que 768px) */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column; /* Empilha a sidebar em cima e o conteúdo embaixo */
+            }
+            .sidebar {
+                position: relative; /* Tira a fixação para não cobrir a tela */
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 2px solid #e1e4e8;
+                padding: 20px;
+                box-sizing: border-box; /* Impede que o padding quebre a largura de 100% */
+            }
+            .content {
+                margin-left: 0; /* Remove o recuo que compensava a sidebar no PC */
+                padding: 20px;
+                box-sizing: border-box;
+            }
+        }
     </style>
 </head>
 <body>
