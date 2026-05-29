@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Biologia UFRGS - Índice</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; display: flex; }
+        
+        /* MENU LATERAL */
+        .sidebar { width: 280px; background: #f4f6f8; padding: 20px; height: 100vh; overflow-y: auto; border-right: 1px solid #e1e4e8; position: fixed; }
+        .sidebar h3 { color: #24292e; margin-top: 0; }
+        .sidebar ul { list-style: none; padding-left: 0; }
+        .sidebar ul li { margin-bottom: 10px; }
+        .sidebar ul li a { color: #0366d6; text-decoration: none; font-weight: 500; display: block; padding: 5px; border-radius: 4px; }
+        .sidebar ul li a:hover { background: #e1e4e8; text-decoration: none; }
+        .sidebar ul li a.active { background: #0366d6; color: white; }
+
+        /* CONTEÚDO PRINCIPAL */
+        .content { margin-left: 320px; padding: 40px; max-width: 900px; width: 100%; }
+        h1, h2 { color: #24292e; border-bottom: 1px solid #eaecef; padding-bottom: 5px; }
+        code { background: #f6f8fa; padding: 2px 5px; border-radius: 3px; font-family: monospace; }
+        
+        /* CONTÊINER DO FLUXOGRAMA (Rolagem Horizontal) */
+        .flowchart-container {
+            width: 100%;
+            overflow-x: auto; /* Cria a barra de rolagem horizontal se a imagem for maior que a tela */
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 10px;
+            background: #f6f8fa;
+            margin-top: 20px;
+        }
+        .flowchart-container img {
+            max-width: none; /* Impede a imagem de encolher */
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h3>Guia Biologia UFRGS</h3>
+        <ul>
+            <li><a href="index.html" class="active">Índice e Fluxograma</a></li>
+            <li><a href="planejamento.html">Planejamento Acadêmico</a></li>
+            <li><a href="estagios.html">Estágios e Bolsas</a></li>
+            <li><a href="cadeiras.html">Guia de Cadeiras (Opinião)</a></li>
+            <li><a href="contatos.html">Links e Contatos Úteis</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Índice Geral</h1>
+        <p>Bem-vindo ao guia de sobrevivência para o Bacharelado em Ciências Biológicas da UFRGS. Navegue pelo menu lateral para encontrar dicas sobre como organizar sua graduação, estágios e resenhas sobre as disciplinas.</p>
+
+        <h2>Fluxograma do Curso (2024/2)</h2>
+        <p>Abaixo está o mapeamento oficial de pré-requisitos do curso. Role para os lados para visualizar todas as etapas (da Etapa 1 [cite: 2] até a Etapa 7 [cite: 8]).</p>
+        
+        <div class="flowchart-container">
+            <img src="fluxograma.png" alt="Fluxograma de pré-requisitos Biologia UFRGS Bacharelado 2024/2">
+        </div>
+    </div>
+
+</body>
+</html>
